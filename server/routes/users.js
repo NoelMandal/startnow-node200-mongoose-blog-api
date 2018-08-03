@@ -20,8 +20,8 @@ router.get('/:id', (req, res) => {
                 res.status(404).send('No user found')
             }
         })
-        .catch(error => {
-            res.status(500).send(error)
+        .catch(err => {
+            res.status(500).send(err)
         })
 });//get single user
 
@@ -31,8 +31,8 @@ router.post('/', (req, res) => {
         .then(item => {
             res.status(201).json(item)
         })
-        .catch(error => {
-            res.status(500).send('Could not create User')
+        .catch(err => {
+            res.status(500).send(err)
         })
 });// create a user
 

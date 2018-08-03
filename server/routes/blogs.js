@@ -29,8 +29,8 @@ router.get("/:id", (req, res) => {
             res.status(404).send('No blog found')
         }
   })
-    .catch(error => {
-      res.status(500).send(error)
+    .catch(err => {
+      res.status(500).send(err)
   })
 }); // get single blog
 
